@@ -11,7 +11,9 @@
             var dataURL = reader.result;
             var output = document.getElementById('mainImage');
             output.src = dataURL;
-            anno.reset();
+            setTimeout(function(){
+                anno.reset();
+            }, 100);
         };
         reader.readAsDataURL(input.files[0]);
     };
